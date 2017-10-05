@@ -34,7 +34,7 @@ class student_obj(models.Model):
     student_gender = models.CharField(max_length=200)
     student_phone = models.CharField(max_length=8) #look later for correct storing method
     student_address = models.TextField(max_length=800)
-    student_guardian = models.ManytoManyField (guardian_obj) 
+    student_guardian = models.ManyToManyField (guardian_obj) 
 
 class course_obj(models.Model):
     course_name = models.CharField(max_length=200)
@@ -44,4 +44,4 @@ class course_obj(models.Model):
     course_duration = models.DurationField()
     course_seats = models.DecimalField(max_digits=5, decimal_places=5)
     course_gender = models.CharField(max_length=200)
-    cours_grade = models.CharField(max_length=200)
+    course_grade = models.CharField(max_length=200)
