@@ -29,7 +29,7 @@ class guardian_obj(models.Model):
     guardian_phone = models.CharField(max_length=8) #look later for correct storing method
     guardian_relation = models.CharField(max_length=200)
 
-class course_obj(models.Model)
+class course_obj(models.Model) 
     course_name = models.CharField(max_length=200)
     course_room = models.CharField(max_length=200)
     course_profesor = models.ForeignKey (profesor_obj, on_delete=models.CASCADE)
