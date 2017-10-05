@@ -31,15 +31,13 @@ class guardian_obj(models.Model):
 
 class course_obj(models.Model)
     course_name = models.CharField(max_length=200)
-    course_room = models.CharField(max_length=200) #define later a room object
+    course_room = models.CharField(max_length=200)
     course_profesor = models.ForeignKey (profesor_obj, on_delete=models.CASCADE)
+    course_schedule = models.DateTimeField()
     course_duration = models.DurationField()
-    course_day = models.CharField(max_length=200)
-    course_start = models.TimeField()
     course_seats = models.DecimalField(max_digits=5, decimal_places=5)
     course_gender = models.CharField(max_length=200)
     cours_grade = models.CharField(max_length=200)
-
 
 
 class profesor_obj(models.Model)
@@ -47,7 +45,5 @@ class profesor_obj(models.Model)
     profesor_name = models.CharField(max_length=200)
     profesor_lastname = models.CharField(max_length=200)
     profesor_phone = models.CharField(max_length=8) #look later for correct storing method
-
-
-
+    
 
