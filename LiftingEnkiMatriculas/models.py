@@ -23,7 +23,7 @@ class profesor_obj(models.Model):
     profesor_lastname = models.CharField(max_length=200)
     profesor_phone = models.CharField(max_length=8) #look later for correct storing method
     def __str__(self):
-        return '%s %s' % (self.profesor_name, self.profesor_name)
+        return '%s %s' % (self.profesor_name, self.profesor_lastname)
 
 
 class student_obj(models.Model):
@@ -33,7 +33,7 @@ class student_obj(models.Model):
     student_lastname = models.CharField(max_length=200)
     student_2ndlastname = models.CharField(max_length=200)
     student_2ndlastname = models.CharField(max_length=200)
-    student_birthday = models.DateTimeField()
+    student_birthday = models.DateField()
     student_grade = models.CharField(max_length=200)
     student_gender = models.CharField(max_length=200)
     student_phone = models.CharField(max_length=8) #look later for correct storing method
@@ -48,11 +48,10 @@ class course_obj(models.Model):
     course_profesor = models.ForeignKey (profesor_obj, on_delete=models.CASCADE)
     course_schedule = models.DateTimeField()
     course_duration = models.DurationField()
-    course_seats = models.DecimalField(max_digits=5, decimal_places=5)
+    course_seats = models.DecimalField(max_digits=4, decimal_places=None)
     course_gender = models.CharField(max_length=200)
     course_grade = models.CharField(max_length=200)
     def __str__(self):
         return self.course_name
     def course_end(self):
         return self.course_schedule + self.course_duration
-        
