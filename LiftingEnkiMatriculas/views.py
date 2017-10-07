@@ -9,5 +9,5 @@ from django.template import loader
 from .models import student_obj
 
 def student_list(request):
-    student_table = student_obj.objects.orderby('-student_name')
+    student_table = student_obj.objects.orderby('student_name')
     return render(request, LiftingEnkiMatricula/table_template.html, {'student_table' : student_table})
