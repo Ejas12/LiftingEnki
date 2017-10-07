@@ -1,9 +1,0 @@
-{% if student_list %}
-<ul>
-{% for student_obj in student_list %}
-    <li><a href="/LiftingEnkiMatriculas/{{ student_name }}/">{{ student_obj.student_lastname }}</a></li>
-{% endfor %}
-</ul>
-{% else %}
-<p>No polls are available.</p>
-{% endif %}
