@@ -11,7 +11,7 @@ class guardian_obj(models.Model):
     guardian_lastname = models.CharField(max_length=200)
     guardian_2ndlastname = models.CharField(max_length=200)
     guardian_2ndlastname = models.CharField(max_length=200)
-    guardian_phone = models.CharField(max_length=8) #look later for correct storing method
+    guardian_phone = models.DecimalField(max_digits=8, decimal_places=7) #look later for correct storing method
     guardian_relation = models.CharField(max_length=200)
     def __str__(self):
         return '%s %s' % (self.guardian_name, self.guardian_lastname)
@@ -48,7 +48,7 @@ class course_obj(models.Model):
     course_profesor = models.ForeignKey (profesor_obj, on_delete=models.CASCADE)
     course_schedule = models.DateTimeField()
     course_duration = models.DurationField()
-    course_seats = models.DecimalField(max_digits=4, decimal_places=None)
+    course_seats = models.DecimalField(max_digits=5, decimal_places=2)
     course_gender = models.CharField(max_length=200)
     course_grade = models.CharField(max_length=200)
     def __str__(self):
