@@ -32,7 +32,6 @@ class student_obj(models.Model):
     student_middlename = models.CharField(max_length=200)
     student_lastname = models.CharField(max_length=200)
     student_2ndlastname = models.CharField(max_length=200)
-    student_2ndlastname = models.CharField(max_length=200)
     student_birthday = models.DateField()
     student_grade = models.CharField(max_length=200)
     student_gender = models.CharField(max_length=200)
