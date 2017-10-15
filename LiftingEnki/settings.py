@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'LiftingEnki.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'LiftingEnki',
-        'USER': 'liftinenkidb',
+        'NAME': 'Ejas12$liftinenkidb',
+        'USER': 'Ejas12',
         'PASSWORD': 'Solo#Gollo8991',
-        'HOST': 'localhost',
+        'HOST': 'Ejas12.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
