@@ -17,7 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^reportes/', include('LiftingEnkiReportes.urls')),
-    url(r'^matriculas/', include('LiftingEnkiMatriculas.urls')),
+    url(r'^reportes/', include('LiftingEnkiReportes.urls' namespace="reportes")),
+    url(r'^matriculas/', include('LiftingEnkiMatriculas.urls' namespace="matriculas")),
     url(r'^admin/', admin.site.urls),
 ]
